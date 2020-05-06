@@ -1,3 +1,4 @@
+/**** VARIABILI **/
 /**** GENERAL **/
 * {
   margin: 0;
@@ -17,7 +18,7 @@ ul {
 }
 
 .container {
-  margin: 2% 6%;
+  margin-top: 3%;
   -webkit-box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.3);
   border-radius: 1%;
@@ -35,6 +36,12 @@ p:hover, a:hover, li:hover {
 h1 {
   font-family: 'Poppins', Helvetica, sans-serif;
   font-weight: bold;
+}
+
+hr {
+  width: 5%;
+  margin-top: 0%;
+  background: #007bff;
 }
 
 /** NAVBAR **/
@@ -118,16 +125,46 @@ nav .text {
   margin-top: 3%;
 }
 
+#riepilogo .material-icons {
+  font-size: 200%;
+  color: #007bff;
+}
+
+#riepilogo .section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#riepilogo .riep-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3%;
+}
+
 /** FOOTER **/
 footer {
-  margin: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 2px solid #f2f2f2;
+  padding: 1% 0;
 }
 
-footer .social li {
+footer ul {
+  width: 134%;
+}
+
+footer .footer-social li {
   display: inline;
+  margin: 1%;
 }
 
-footer .social li:hover {
+footer .footer-social li:hover {
   opacity: unset;
 }
 
