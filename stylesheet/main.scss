@@ -26,21 +26,26 @@ ul{
 
 p, a, li{
     opacity: 0.55;
+    transition: 1s;
     &:hover{
         color: black;
         text-decoration: none;
     }
 }
 
-h1{
+h1, h4, h5{
     font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+h1, h4 {
     font-weight: bold;
 }
 
 hr{
-    width: 5%;
+    width: 4%;
     margin-top: 0%;
     background: $colore;
+    height: 1px; 
 }
 
 /** NAVBAR **/
@@ -54,6 +59,10 @@ nav{
         display: flex;
         a{
             margin-right: -30%;
+            opacity: unset;
+        }
+        p{
+            opacity: unset;
         }
     }
     .menu{
@@ -83,7 +92,9 @@ nav{
         margin: -8% -30% 0px 0;
         width: 63%;
         img{
-        width: 117%;
+        width: 98%;
+        margin-top: 12%; 
+        border-radius: 100%;
         } 
     }
     .description{
@@ -98,21 +109,34 @@ nav{
 
 /** SECTION **/
 
-#riepilogo{
-    margin-top: 3%;
+#riepilogo, #portfolio{
+    margin-top: 6%;
     .material-icons{
         font-size: 200%;
         color: $colore;
     }
     .section-content{
         display: flex;
+        padding: 4%;
+        .text .fotografo {height: 103%;}
+        .material-icons{
+            margin-right: 3%;
+        }
     }
     .riep-container{
         display: flex;
-        margin-top: 3%;
+        margin: 2%;
     }
 }
 
+#portfolio{
+    img{
+        width: 100%;
+        box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.3);
+        transition: 1s;
+        &:hover{transform: scale(1.1)}
+    }
+}
 
 /** FOOTER **/
 footer{
@@ -130,6 +154,18 @@ footer{
             opacity: unset;
         }
     }
+    .footer-mail, .footer-copy{
+        display: flex;
+        .material-icons{
+            color: $colore;
+        }
+    }
+    a, li{
+        opacity: unset;
+    }
+    img{
+        width: 19px;
+    }
 }
 
 /** MEDIA QUERY **/
@@ -138,12 +174,24 @@ footer{
     body {
       background-color: #F09A9D; /* Red */
     }
+    nav #logo{
+        justify-content: center;
+    }
+    .main-content .foto img{
+        margin-top: 39%;
+    }
   }
   
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
     body {
       background-color: #F5CF8E; /* Yellow */
+    }
+    nav .menu{
+        width: 41%;
+    }
+    .main-content .foto img{
+        margin-top: 39%;
     }
   }
   
