@@ -144,6 +144,7 @@ footer{
     justify-content: space-between;
     border-top: 2px solid #f2f2f2;
     padding: 1% 0;
+    margin-top: 6%;
     ul{
         width: 134%;
     }
@@ -158,7 +159,12 @@ footer{
         display: flex;
         .material-icons{
             color: $colore;
+            margin: 0 3% 0 -5%;
+            
         }
+    }
+    .footer-mail .telephone{
+        margin-left: 17%;
     }
     a, li{
         opacity: unset;
@@ -170,23 +176,35 @@ footer{
 
 /** MEDIA QUERY **/
 /* Mobile Styles */ 
-@media only screen and (max-width: 400px) {
-    body {
-      background-color: #F09A9D; /* Red */
+@media only screen and (max-width: 415px) {
+    .container{
+        margin-top: 0px;
+        box-shadow: none;
     }
-    nav #logo{
-        justify-content: center;
+    nav 
+    .menu{
+        display: none;
     }
-    .main-content .foto img{
-        margin-top: 39%;
+    .main-content 
+    .description{
+        width: 100%;
+        margin: 18% 4% 12% 7%;
     }
+    .foto{
+        position: absolute;
+        top: 12px;
+        left: 165px;
+    }
+    #riepilogo .section-content{
+        padding: 7%;
+    }
+
+    footer{display: none;}
   }
-  
-  /* Tablet Styles */
+
+
+/* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-      background-color: #F5CF8E; /* Yellow */
-    }
     nav .menu{
         width: 41%;
     }
