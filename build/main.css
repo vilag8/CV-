@@ -52,7 +52,7 @@ hr {
 }
 
 /** NAVBAR **/
-nav {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,45 +61,45 @@ nav {
           justify-content: space-between;
 }
 
-nav img {
-  width: 50%;
+header p {
+  opacity: unset;
 }
 
-nav #logo {
+header #logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav #logo a {
+header #logo img {
+  width: 50%;
+}
+
+header #logo a {
   margin-right: -30%;
   opacity: unset;
 }
 
-nav #logo p {
+header .text {
+  margin-top: 11%;
+}
+
+header .list {
+  margin-left: -52%;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li {
+  margin: 5%;
+}
+
+header ul li:hover {
   opacity: unset;
-}
-
-nav .menu {
-  width: 23%;
-}
-
-nav .menu ul {
-  display: inline;
-}
-
-nav .menu ul li {
-  display: inline;
-  margin: 3%;
-  opacity: .55;
-}
-
-nav .menu ul li:hover {
-  opacity: 1.55;
-}
-
-nav .text {
-  margin-top: 38px;
 }
 
 /** MAIN **/
@@ -119,7 +119,7 @@ nav .text {
 
 .main-content .foto img {
   width: 98%;
-  margin-top: 12%;
+  margin-top: 21%;
   border-radius: 100%;
 }
 
@@ -177,6 +177,10 @@ nav .text {
 #portfolio img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#portfolio a {
+  opacity: unset;
 }
 
 /** FOOTER **/

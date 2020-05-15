@@ -50,38 +50,36 @@ hr{
 }
 
 /** NAVBAR **/
-nav{
+header{
     display: flex;
     justify-content: space-between;
-    img{
-        width: 50%;
+    p{
+        opacity: unset;
     }
     #logo{
         display: flex;
+        img{
+            width: 50%;
+        }
         a{
             margin-right: -30%;
             opacity: unset;
         }
-        p{
-            opacity: unset;
-        }
-    }
-    .menu{
-        width: 23%; 
-        ul {
-        display: inline;
-            li{
-            display: inline;
-            margin: 3%;
-            opacity: .55;
-            &:hover{
-                opacity: 1.55;
-            }
-            }
-        }    
-    }
+    }  
     .text{
-        margin-top: 38px;
+        margin-top: 11%;
+    }
+    .list{
+        margin-left: -52%;
+    }
+    ul {
+        display: flex;
+        li{
+        margin: 5%;
+        &:hover{
+            opacity: unset;
+            }
+        }
     }
 }
 
@@ -94,7 +92,7 @@ nav{
         width: 63%;
         img{
         width: 98%;
-        margin-top: 12%; 
+        margin-top: 21%; 
         border-radius: 100%;
         } 
     }
@@ -136,6 +134,9 @@ nav{
         box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.3);
         transition: 1s;
         &:hover{transform: scale(1.1)}
+    }
+    a{
+        opacity: unset;
     }
 }
 

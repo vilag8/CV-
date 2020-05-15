@@ -22,21 +22,19 @@
 
     <body>
         <div class="container">
-            <header>
-                <nav>    
-                    <div id="logo">
-                        <a href="index.html"><img src="images/logo.jpg" alt="logo"> </a>
-                        <p class="text">Vincenzo Lagrotta</p>    
-                    </div> 
-                
-                    <div class="text menu">
-                        <ul>
-                            <li><a href="#riepilogo">Riepilogo</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#footer">Contatti</a></li>
-                        </ul>  
-                    </div>                               
+            <header>            
+                <div id="logo">
+                    <a href="index.html"><img src="images/logo.jpg" alt="logo"> </a>
+                    <p class="text">Vincenzo Lagrotta</p>    
+                </div> 
+                <nav>
+                    <ul class="text list">
+                        <li><a href="#riepilogo">Riepilogo</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#footer">Contatti</a></li>
+                    </ul>  
                 </nav>
+            </header>
 
             <main>
                 <div class="main-content">
@@ -116,13 +114,13 @@
                         <div class="section-wrap">
                             <div class="section-content">
                                 <div class="text">
-                                    <img src="images/sitopalestra.JPG" alt="">
+                                    <a href="https://github.com/vilag8/palestra" target="blank"><img src="images/sitopalestra.JPG" alt="project"></a>
                                 </div>
                             </div>
 
                             <div class="section-content">
                                 <div class="text">
-                                    <img src="images/sitover.JPG" alt="">
+                                    <img src="images/sitover.JPG" alt="project">
                                 </div>
                             </div>
                         </div>
@@ -130,13 +128,13 @@
                         <div class="section-wrap">
                             <div class="section-content">
                                 <div class="text">
-                                    <img src="images/sitoinfermiere.JPG" alt="">
+                                    <img src="images/sitoinfermiere.JPG" alt="project">
                                 </div>
                             </div>
 
                             <div class="section-content">
                                 <div class="text">
-                                    <img src="images/sitofotgrafo.JPG" alt="" class="fotografo">
+                                    <a href="https://github.com/vilag8/fotografo" target="blank"><img src="images/sitofotgrafo.JPG" alt="project" class="fotografo"></a>
                                 </div>
                             </div>
                         </div>
@@ -173,9 +171,11 @@
 
             var contact= document.querySelector('.contact')
             function clickcontact(){
-                alert('inviami un mail a vi_lag@hotmail.it o contattami al 3461068831')
+                alert('inviami una mail a vi_lag@hotmail.it o contattami al 3461068831')
             }
             contact.addEventListener('click', clickcontact)
+            
         </script>
+
     </body>
     </html>
