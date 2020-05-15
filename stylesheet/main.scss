@@ -186,19 +186,23 @@ footer{
         margin-top: 0px;
         box-shadow: none;
     }
-    nav 
-    .menu{
-        display: none;
-    }
     .main-content 
     .description{
         width: 100%;
         margin: 18% 4% 12% 7%;
     }
+    header{
+        display: grid;
+        justify-content: center;
+        .list{
+            margin: 0% 0% -10%
+         }
+         .nav-contatti{
+             display: none;
+         }
+    }
     .foto{
-        position: absolute;
-        top: 12px;
-        left: 165px;
+        display: none;    
     }
     #riepilogo .section-content{
         padding: 7%;

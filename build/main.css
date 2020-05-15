@@ -244,19 +244,26 @@ footer p {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  nav
-.menu {
-    display: none;
-  }
   .main-content
 .description {
     width: 100%;
     margin: 18% 4% 12% 7%;
   }
+  header {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .list {
+    margin: 0% 0% -10%;
+  }
+  header .nav-contatti {
+    display: none;
+  }
   .foto {
-    position: absolute;
-    top: 12px;
-    left: 165px;
+    display: none;
   }
   #riepilogo .section-content {
     padding: 7%;
