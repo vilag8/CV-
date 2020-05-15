@@ -183,53 +183,77 @@ header ul li:hover {
   opacity: unset;
 }
 
-/** FOOTER **/
-footer {
+#contatti {
+  margin-top: 11%;
+}
+
+#contatti .contatti-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 2px solid #f2f2f2;
-  padding: 1% 0;
-  margin-top: 6%;
+  padding: 4%;
+  margin-top: 5%;
 }
 
-footer ul {
-  width: 134%;
-}
-
-footer .footer-social li {
-  display: inline;
-  margin: 1%;
-}
-
-footer .footer-social li:hover {
+#contatti .contatti-container a {
   opacity: unset;
 }
 
-footer .footer-mail, footer .footer-copy {
+#contatti .contatti-container .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-footer .footer-mail .material-icons, footer .footer-copy .material-icons {
+#contatti .contatti-container .social .social-content {
+  padding: 1%;
+}
+
+#contatti .contatti-container .social .social-content .phone {
+  margin-top: -10%;
+}
+
+#contatti .contatti-container .s-center {
+  margin-left: 18%;
+}
+
+#contatti .contatti-container .address {
+  width: 57%;
+}
+
+#contatti .material-icons {
+  font-size: 67px;
+}
+
+#contatti img {
+  width: 9%;
+}
+
+/** FOOTER **/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 2px solid #f2f2f2;
+  padding: 1% 0;
+  margin-top: 6%;
+}
+
+footer .footer-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-copy .material-icons {
   color: #007bff;
   margin: 0 3% 0 -5%;
-}
-
-footer .footer-mail .telephone {
-  margin-left: 17%;
-}
-
-footer a, footer li {
-  opacity: unset;
-}
-
-footer img {
-  width: 19px;
 }
 
 footer p {
@@ -255,29 +279,35 @@ footer p {
   header {
     display: -ms-grid;
     display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
   header .list {
     margin: 0% 0% -10%;
-  }
-  header .nav-contatti {
-    display: none;
   }
   .foto {
     display: none;
   }
   #riepilogo .section-content {
-    padding: 7%;
+    padding: 5%;
   }
-  footer {
-    display: none;
+  #contatti {
+    margin-top: 23%;
+  }
+  #contatti .contatti-container {
+    display: block;
+  }
+  #contatti .contatti-container .s-center {
+    margin: 3% 0 8%;
   }
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
   nav .menu {
     width: 41%;
   }

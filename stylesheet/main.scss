@@ -140,39 +140,55 @@ header{
     }
 }
 
+#contatti{
+    margin-top: 11%;
+    .contatti-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+    margin-top: 5%;
+        a{
+            opacity: unset;
+        }
+        .social{
+            display: flex;
+            .social-content{
+                padding: 1%;
+                .phone{
+                    margin-top: -10%;
+                }
+            }
+        }
+        .s-center{
+            margin-left: 18%;
+        }
+        .address{
+            width: 57%;
+        }
+    }
+    .material-icons{
+        font-size: 67px;
+    }
+    img{
+        width: 9%;
+    }
+}
+
+
 /** FOOTER **/
 footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     border-top: 2px solid #f2f2f2;
     padding: 1% 0;
     margin-top: 6%;
-    ul{
-        width: 134%;
-    }
-    .footer-social li{
-    display: inline;
-    margin: 1%;
-        &:hover{
-            opacity: unset;
-        }
-    }
-    .footer-mail, .footer-copy{
+    .footer-copy{
         display: flex;
         .material-icons{
             color: $colore;
             margin: 0 3% 0 -5%;
             
         }
-    }
-    .footer-mail .telephone{
-        margin-left: 17%;
-    }
-    a, li{
-        opacity: unset;
-    }
-    img{
-        width: 19px;
     }
     p{
         font-size: 87%;
@@ -194,27 +210,32 @@ footer{
     }
     header{
         display: grid;
-        justify-content: center;
+        justify-content: left;
         .list{
             margin: 0% 0% -10%
-         }
-         .nav-contatti{
-             display: none;
          }
     }
     .foto{
         display: none;    
     }
     #riepilogo .section-content{
-        padding: 7%;
+        padding: 5%;
     }
-
-    footer{display: none;}
+    #contatti{
+        margin-top: 23%;
+        .contatti-container{
+        display: block;
+        .s-center {
+            margin: 3% 0 8%;
+            }
+        }
+    } 
   }
 
 
 /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
+    *{font-family: Arial, Helvetica, sans-serif;}
     nav .menu{
         width: 41%;
     }
