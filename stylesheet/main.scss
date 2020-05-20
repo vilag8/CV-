@@ -132,6 +132,14 @@ header{
             margin-right: 3%;
         }
     }
+    button a{
+        opacity: unset;
+        color: #007bff;
+        transition: unset;
+        &:hover{
+            color: white;
+        }
+    }
 }
 
 /** SECTION **/

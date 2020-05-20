@@ -165,6 +165,17 @@ header ul li:hover {
   margin-right: 3%;
 }
 
+.main-content button a {
+  opacity: unset;
+  color: #007bff;
+  -webkit-transition: unset;
+  transition: unset;
+}
+
+.main-content button a:hover {
+  color: white;
+}
+
 /** SECTION **/
 #riepilogo, #portfolio {
   margin-top: 6%;
