@@ -20,11 +20,9 @@ $($closediv).click(function (e) {
 
 //VERSIONE SCURA
 $('#black-version').click(function (e) { 
-    $('body').css({
-        "color" : "white", 
-        "background" : "black" 
-    });
-    $('a').css('color',"white")
+    //AGGIUNGO E TOLGO UNA CLASSE AD OGNI CLICK
+    $('body').toggleClass('body--black');
+    $('a').toggleClass('a--black');
 });
 
 //QUANDO ESCI DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI

@@ -1,5 +1,14 @@
 /**** VARIABILI **/
 /**** GENERAL **/
+.body--black{
+  color: white;
+  background: black;
+}
+
+.a--black{
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +40,7 @@ p, a, li {
   transition: 1s;
 }
 
-p:hover, a:hover, li:hover {
+a:hover, li:hover {
   color: black;
   text-decoration: none;
 }
@@ -45,10 +54,10 @@ h1, h4 {
 }
 
 hr {
-  width: 4%;
+  width: 6%;
   margin-top: 0%;
   background: #007bff;
-  height: 1px;
+  height: 1.5px;
 }
 
 /** NAVBAR **/
@@ -102,7 +111,7 @@ header ul li:hover {
   opacity: unset;
 }
 
-/** AGGIUNTO CON JS**/
+/** OVERLAY AGGIUNTO CON JS**/
 .overlay {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -120,12 +129,12 @@ header ul li:hover {
   color: white;
   margin: 20%;
   padding: 2%;
+  position: relative;
 }
 
 .overlay .divoverlay .closediv {
   position: absolute;
-  top: 39%;
-  left: 78%;
+  right: 1%; top: 0;
 }
 
 .overlay .divoverlay .closediv a {
@@ -146,7 +155,11 @@ header ul li:hover {
 .main-content .foto {
   margin: -8% -30% 0px 0;
   width: 63%;
+  transition: 1s;
 }
+
+/** ANIMAZIONE DIV AL PASSAGGIO DEL MOUSE **/
+.main-content .foto:hover{transform: translateY(-30px);}
 
 .main-content .foto img {
   width: 98%;
@@ -157,13 +170,31 @@ header ul li:hover {
 .main-content .description {
   width: 35%;
   margin: 8% 4% 0 7%;
+  transition: 1s;
 }
+
+/** ANIMAZIONE DIV AL PASSAGGIO DEL MOUSE **/
+.main-content .description:hover{transform: translateY(-30px);}
+
 
 .main-content .description .btn {
   -webkit-box-shadow: 0px 5px 9px -3px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 5px 9px -3px rgba(0, 0, 0, 0.3);
   margin-right: 3%;
 }
+
+/** ANIMAZIONE OSCILLATORIA BOTTONE CONTATTI CON KEYFRAMES **/
+.main-content .description .contact{
+  animation: rotate_effect 3s infinite ease-in-out;
+}
+
+@keyframes rotate_effect{
+  0% {transform: rotate(0deg);}
+  40% {transform: rotate(10deg);}
+  60% {transform: rotate(-10deg);}
+  100% {transform: rotate(0deg);}
+}
+/** FINE ANIMAZIONE **/
 
 .main-content button a {
   opacity: unset;
@@ -176,7 +207,21 @@ header ul li:hover {
   color: white;
 }
 
-/** SECTION **/
+
+
+/** SECTION RIEPILOGO**/
+#riepilogo:hover hr{
+    /** ANIMAZIONE LINEA CON KEYFRAMES AL PASSAGGIO SUL DIV**/
+    animation: line_slow 3s infinite ease-in-out; 
+  }
+  @keyframes line_slow{
+    0% {width: 0%; opacity: 1;}
+    50% {width: 6%; opacity: 1;}
+    75% {width: 6%; opacity: 0;}
+    100% {width: 0%; opacity: 0;}
+  }
+  
+
 #riepilogo, #portfolio {
   margin-top: 6%;
 }
@@ -208,6 +253,19 @@ header ul li:hover {
   margin: 2%;
 }
 
+/** SECTION PORTFOLIO **/
+#portfolio:hover hr{
+  /** ANIMAZIONE LINEA CON KEYFRAMES AL PASSAGGIO SUL DIV**/
+  animation: line_slow 3s infinite ease-in-out; 
+}
+@keyframes line_slow{
+  0% {width: 0%; opacity: 1;}
+  50% {width: 6%; opacity: 1;}
+  75% {width: 6%; opacity: 0;}
+  100% {width: 0%; opacity: 0;}
+}
+
+
 #portfolio img {
   width: 100%;
   -webkit-box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.3);
@@ -223,6 +281,18 @@ header ul li:hover {
 
 #portfolio a {
   opacity: unset;
+}
+
+/** SECTION CONTATTI **/
+#contatti:hover hr{
+  /** ANIMAZIONE LINEA CON KEYFRAMES AL PASSAGGIO SUL DIV**/
+  animation: line_slow 3s infinite ease-in-out; 
+}
+@keyframes line_slow{
+  0% {width: 0%; opacity: 1;}
+  50% {width: 6%; opacity: 1;}
+  75% {width: 6%; opacity: 0;}
+  100% {width: 0%; opacity: 0;}
 }
 
 #contatti {
@@ -343,10 +413,6 @@ footer p {
   #contatti .contatti-container .s-center {
     margin: 3% 0 8%;
   }
-  .overlay .divoverlay .closediv {
-    top: 42%;
-    left: 74%;
-  }
 }
 
 /* Tablet Styles */
@@ -359,10 +425,6 @@ footer p {
   }
   .main-content .foto img {
     margin-top: 39%;
-  }
-  .overlay .divoverlay .closediv {
-    top: 32%;
-    left: 76%;
   }
 }
 /*# sourceMappingURL=main.css.map */
