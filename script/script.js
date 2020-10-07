@@ -17,3 +17,17 @@ $($divoverlay).append($closediv);
 $($closediv).click(function (e) { 
     $($overlay).fadeOut();
 });
+
+//VERSIONE SCURA
+$('#black-version').click(function (e) { 
+    $('body').css({
+        "color" : "white", 
+        "background" : "black" 
+    });
+    $('a').css('color',"white")
+});
+
+//QUANDO ESCI DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI
+$('.container').mouseleave(function () { 
+    $($overlay).fadeIn();
+});
