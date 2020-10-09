@@ -1,3 +1,8 @@
+//ANIMAZIONE LIBRERIA SCROLLREVEAL
+ScrollReveal().reveal('.headline', { distance: '150px', duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 400  });
+ScrollReveal().reveal('.zoom', {duration: 1000, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 400, scale: 0.65 });
+
+
 //CREO UN DIV PER L'OVERLAY E LO AGGIUNGO AL .CONTAINER
 var $overlay = $('<div class="overlay"></div>')
 $('.container').append($overlay);
@@ -25,7 +30,7 @@ $('#black-version').click(function (e) {
     $('a').toggleClass('a--black');
 });
 
-//QUANDO ESCI DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI
+//QUANDO IL MOUSE ESCE DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI
 $('.container').mouseleave(function () { 
     $($overlay).fadeIn();
 });

@@ -144,6 +144,8 @@ header ul li:hover {
 
 /** MAIN **/
 .main-content {
+  margin-top: 5%;
+  margin-bottom: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
