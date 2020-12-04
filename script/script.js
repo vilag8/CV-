@@ -52,3 +52,10 @@ $('a').mouseover(function () {
 $('a').mouseleave(function () { 
     $('.cursor').removeClass('cursor_link');
 });
+
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+	});
+});
