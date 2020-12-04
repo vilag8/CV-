@@ -17,9 +17,14 @@
   font-family: 'Indie Flower', cursive;
 }
 
+/* NASCONDO IL CURSORE */
+body{cursor: none; z-index: -1;}
+
 a {
   text-decoration: none;
   color: black;
+  /* NASCONDO IL CURSORE QUANDO PASSO SUI LINK*/
+  cursor: none;
 }
 
 ul {
@@ -120,6 +125,7 @@ header ul li:hover {
   top: 0;
   left: 0;
   display: none;
+  z-index: 0;
 }
 
 .overlay .divoverlay {
@@ -415,6 +421,25 @@ footer p {
   #contatti .contatti-container .s-center {
     margin: 3% 0 8%;
   }
+}
+
+.cursor{
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 100%;
+  position: absolute;
+  /* CENTRO IL PUNTATORE */ transform: translate(-50%, -50%);
+  /* RENDO IL PUNTATORE FUNZIONANTE */pointer-events: none; 
+  transition: 0.3s;
+  transition-property: transform, background;
+  z-index: 1;
+}
+
+.cursor_link{
+  transform: scale(1.3);
+  border-color: black;
+  background: #007bff;
 }
 
 /* Tablet Styles */

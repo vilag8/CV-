@@ -32,5 +32,23 @@ $('#black-version').click(function (e) {
 
 //QUANDO IL MOUSE ESCE DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI
 $('.container').mouseleave(function () { 
-    $($overlay).fadeIn();
+   $($overlay).fadeIn();
+});
+
+
+//MOUSE FORMA CIRCOLARE
+//NASCONDO LA FRECCIA STANDARD NEL FOGLIO CSS
+$(window).mousemove(function (e) { 
+    $('.cursor').css('top', e.pageY);
+    $('.cursor').css('left', e.pageX);
+});
+
+//QUANDO IL MOUSE PASSA SOPRA I LINK INGRANDISCI E COLORA IL CURSORE AGGIUNGENDO UNA CLASSE
+$('a').mouseover(function () { 
+    $('.cursor').addClass('cursor_link');
+});
+
+//QUANDO IL MOUSE LASCIA I LINK TOGLI LA CLASSE IL CURSORE
+$('a').mouseleave(function () { 
+    $('.cursor').removeClass('cursor_link');
 });
