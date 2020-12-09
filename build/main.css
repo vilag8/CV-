@@ -1,14 +1,81 @@
 /**** VARIABILI **/
+/**** KEYFRAMES **/
+@-webkit-keyframes line_slow {
+  0% {
+    width: 0%;
+    opacity: 1;
+  }
+  50% {
+    width: 6%;
+    opacity: 1;
+  }
+  75% {
+    width: 6%;
+    opacity: 0;
+  }
+  100% {
+    width: 0%;
+    opacity: 0;
+  }
+}
+@keyframes line_slow {
+  0% {
+    width: 0%;
+    opacity: 1;
+  }
+  50% {
+    width: 6%;
+    opacity: 1;
+  }
+  75% {
+    width: 6%;
+    opacity: 0;
+  }
+  100% {
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate_effect {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate_effect {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 /**** GENERAL **/
-.body--black{
-  color: white;
-  background: black;
-}
-
-.a--black{
-  color: white;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -18,12 +85,28 @@
 }
 
 /* NASCONDO IL CURSORE */
-body{cursor: none; z-index: -1;}
+body {
+  cursor: none;
+  z-index: -1;
+}
 
+/* VERSIONE SCURA */
+.body--black {
+  color: white;
+  background: black;
+}
+
+.a--black {
+  color: white;
+}
+
+/* FINE VERSIONE SCURA */
 a {
   text-decoration: none;
   color: black;
-  /* NASCONDO IL CURSORE QUANDO PASSO SUI LINK*/
+}
+
+a:hover {
   cursor: none;
 }
 
@@ -45,7 +128,7 @@ p, a, li {
   transition: 1s;
 }
 
-a:hover, li:hover {
+p:hover, a:hover, li:hover {
   color: black;
   text-decoration: none;
 }
@@ -59,10 +142,10 @@ h1, h4 {
 }
 
 hr {
-  width: 6%;
+  width: 4%;
   margin-top: 0%;
   background: #007bff;
-  height: 1.5px;
+  height: 1px;
 }
 
 /** NAVBAR **/
@@ -116,7 +199,7 @@ header ul li:hover {
   opacity: unset;
 }
 
-/** OVERLAY AGGIUNTO CON JS**/
+/** AGGIUNTO CON JS**/
 .overlay {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -125,7 +208,6 @@ header ul li:hover {
   top: 0;
   left: 0;
   display: none;
-  z-index: 0;
 }
 
 .overlay .divoverlay {
@@ -135,12 +217,12 @@ header ul li:hover {
   color: white;
   margin: 20%;
   padding: 2%;
-  position: relative;
 }
 
 .overlay .divoverlay .closediv {
   position: absolute;
-  right: 1%; top: 0;
+  top: 39%;
+  left: 78%;
 }
 
 .overlay .divoverlay .closediv a {
@@ -150,8 +232,6 @@ header ul li:hover {
 
 /** MAIN **/
 .main-content {
-  margin-top: 5%;
-  margin-bottom: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,11 +243,9 @@ header ul li:hover {
 .main-content .foto {
   margin: -8% -30% 0px 0;
   width: 63%;
+  -webkit-transition: 1s;
   transition: 1s;
 }
-
-/** ANIMAZIONE DIV AL PASSAGGIO DEL MOUSE **/
-.main-content .foto:hover{transform: translateY(-30px);}
 
 .main-content .foto img {
   width: 98%;
@@ -175,15 +253,18 @@ header ul li:hover {
   border-radius: 100%;
 }
 
+.main-content .foto:hover {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
 .main-content .description {
   width: 35%;
   margin: 8% 4% 0 7%;
+  -webkit-transition: 1s;
   transition: 1s;
+  /* ANIMAZIONE PULSANTE CONTATTI CON KEYFRAMES */
 }
-
-/** ANIMAZIONE DIV AL PASSAGGIO DEL MOUSE **/
-.main-content .description:hover{transform: translateY(-30px);}
-
 
 .main-content .description .btn {
   -webkit-box-shadow: 0px 5px 9px -3px rgba(0, 0, 0, 0.3);
@@ -191,18 +272,10 @@ header ul li:hover {
   margin-right: 3%;
 }
 
-/** ANIMAZIONE OSCILLATORIA BOTTONE CONTATTI CON KEYFRAMES **/
-.main-content .description .contact{
-  animation: rotate_effect 3s infinite ease-in-out;
+.main-content .description .contact {
+  -webkit-animation: rotate_effect 3s infinite ease-in-out;
+          animation: rotate_effect 3s infinite ease-in-out;
 }
-
-@keyframes rotate_effect{
-  0% {transform: rotate(0deg);}
-  40% {transform: rotate(10deg);}
-  60% {transform: rotate(-10deg);}
-  100% {transform: rotate(0deg);}
-}
-/** FINE ANIMAZIONE **/
 
 .main-content button a {
   opacity: unset;
@@ -215,23 +288,10 @@ header ul li:hover {
   color: white;
 }
 
-
-
-/** SECTION RIEPILOGO**/
-#riepilogo:hover hr{
-    /** ANIMAZIONE LINEA CON KEYFRAMES AL PASSAGGIO SUL DIV**/
-    animation: line_slow 3s infinite ease-in-out; 
-  }
-  @keyframes line_slow{
-    0% {width: 0%; opacity: 1;}
-    50% {width: 6%; opacity: 1;}
-    75% {width: 6%; opacity: 0;}
-    100% {width: 0%; opacity: 0;}
-  }
-  
-
+/** SECTION **/
 #riepilogo, #portfolio {
   margin-top: 6%;
+  /* ANIMAIONE LINEA CON KEYFRAMES */
 }
 
 #riepilogo .material-icons, #portfolio .material-icons {
@@ -261,18 +321,10 @@ header ul li:hover {
   margin: 2%;
 }
 
-/** SECTION PORTFOLIO **/
-#portfolio:hover hr{
-  /** ANIMAZIONE LINEA CON KEYFRAMES AL PASSAGGIO SUL DIV**/
-  animation: line_slow 3s infinite ease-in-out; 
+#riepilogo:hover hr, #portfolio:hover hr {
+  -webkit-animation: line_slow 3s infinite ease-in-out;
+          animation: line_slow 3s infinite ease-in-out;
 }
-@keyframes line_slow{
-  0% {width: 0%; opacity: 1;}
-  50% {width: 6%; opacity: 1;}
-  75% {width: 6%; opacity: 0;}
-  100% {width: 0%; opacity: 0;}
-}
-
 
 #portfolio img {
   width: 100%;
@@ -291,20 +343,9 @@ header ul li:hover {
   opacity: unset;
 }
 
-/** SECTION CONTATTI **/
-#contatti:hover hr{
-  /** ANIMAZIONE LINEA CON KEYFRAMES AL PASSAGGIO SUL DIV**/
-  animation: line_slow 3s infinite ease-in-out; 
-}
-@keyframes line_slow{
-  0% {width: 0%; opacity: 1;}
-  50% {width: 6%; opacity: 1;}
-  75% {width: 6%; opacity: 0;}
-  100% {width: 0%; opacity: 0;}
-}
-
 #contatti {
   margin-top: 11%;
+  /* ANIMAZIONE LINEA CON KEYFRAMES */
 }
 
 #contatti .contatti-container {
@@ -352,6 +393,11 @@ header ul li:hover {
   width: 9%;
 }
 
+#contatti:hover hr {
+  -webkit-animation: line_slow 3s infinite ease-in-out;
+          animation: line_slow 3s infinite ease-in-out;
+}
+
 /** FOOTER **/
 footer {
   display: -webkit-box;
@@ -381,26 +427,33 @@ footer p {
 }
 
 /* CURSORE */
-.cursor{
+.cursor {
   width: 20px;
   height: 20px;
-  border: 2px solid  #007bff;
+  border: 2px solid black;
   border-radius: 100%;
   position: absolute;
-  /* CENTRO IL DIV SUL PUNTATORE */ transform: translate(-50%, -50%);
-  /* RENDO IL PUNTATORE FUNZIONANTE */ pointer-events: none; 
+  /* CENTRO IL DIV SUL PUNTATORE */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /* RENDO IL PUNTATORE FUNZIONANTE */
+  pointer-events: none;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
-  /*APPLICO LA TRANSIZIONE SOLO PER ALCUNE PROPRIETA'*/ transition-property: transform, background;
+  /*APPLICO LA TRANSIZIONE SOLO PER ALCUNE PROPRIETA'*/
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: transform, background;
+  transition-property: transform, background, -webkit-transform;
   z-index: 1;
-  /* APPLICO UN FILTRO AL PASSAGGIO DEL MOUSE SUGLI ELEMENTI */ backdrop-filter: grayscale();
 }
 
-.cursor_link{
-  transform: scale(1.3);
+.cursor_link {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   border-color: black;
   background: #007bff;
 }
-
 
 /** MEDIA QUERY **/
 /* Mobile Styles */
@@ -443,8 +496,11 @@ footer p {
   #contatti .contatti-container .s-center {
     margin: 3% 0 8%;
   }
+  .overlay .divoverlay .closediv {
+    top: 42%;
+    left: 74%;
+  }
 }
-
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -457,4 +513,9 @@ footer p {
   .main-content .foto img {
     margin-top: 39%;
   }
+  .overlay .divoverlay .closediv {
+    top: 32%;
+    left: 76%;
+  }
 }
+/*# sourceMappingURL=main.css.map */

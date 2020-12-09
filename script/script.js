@@ -28,6 +28,7 @@ $('#black-version').click(function (e) {
     //AGGIUNGO E TOLGO UNA CLASSE AD OGNI CLICK
     $('body').toggleClass('body--black');
     $('a').toggleClass('a--black');
+    $('.cursor').toggleClass('border', 'blue');
 });
 
 //QUANDO IL MOUSE ESCE DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI
