@@ -1,0 +1,8 @@
+@mixin line-section-hover{
+    animation: line_slow 3s infinite ease-in-out;
+}
+
+@mixin display-flex($value){
+    display: flex;
+    justify-content: $value;
+}
