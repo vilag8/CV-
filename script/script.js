@@ -13,7 +13,7 @@ $('.contact').click(function () {
 });
 
 //AGGIUNGO UN ULTERIORE DIV ALL'INTERNO DELL'OOVERLAY CON GLI ESTREMI PER IL CONTATTO
-var $divoverlay = $('<div class="divoverlay"><h3>Inviami una mail a <a href="mailto:vi_lag@hotmail.it">vi_lag@hotmail.it</a></h3><br><h3>oppure contattami al numero <a href="tel:+39346------">3461068831</a></h3></div>')
+var $divoverlay = $('<div class="divoverlay"><h3>Inviami una mail a <a href="mailto:vi_lag@hotmail.it">vi_lag@hotmail.it</a></h3><br><h3>oppure contattami al numero <a href="tel:+39346------">346000000</a></h3></div>')
 //AGGIUNGO NELL'ULTIMO DIV IL TASTO X PER CHIUDERE IL POP-UP APERTO
 var $closediv = $('<div class="closediv"><a href="#">X</a></div>')
 $('.overlay').append($divoverlay);
