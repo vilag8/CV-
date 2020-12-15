@@ -32,9 +32,9 @@ $('#black-version').click(function (e) {
 });
 
 //QUANDO IL MOUSE ESCE DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI
-$('.container').mouseleave(function () { 
-   $($overlay).fadeIn();
-});
+//$('.container').mouseleave(function () { 
+//   $($overlay).fadeIn();
+//});
 
 
 //MOUSE FORMA CIRCOLARE
