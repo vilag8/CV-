@@ -89,12 +89,23 @@
 body {
   cursor: none;
   z-index: -1;
+  -webkit-transition: 1s all;
+  transition: 1s all;
 }
 
 /* VERSIONE SCURA */
 .body--black {
+  -webkit-transition: 1s all;
+  transition: 1s all;
   color: white;
   background: black;
+}
+
+.body--black #black-version {
+  color: white;
+  border: 2px solid white;
+  -webkit-box-shadow: 0px 0px 44px 14px #007bff;
+          box-shadow: 0px 0px 44px 14px #007bff;
 }
 
 .a--black {
@@ -199,6 +210,18 @@ header ul li {
 
 header ul li:hover {
   opacity: unset;
+}
+
+header #black-version {
+  -webkit-box-shadow: 0px 1px 44px -2px black;
+          box-shadow: 0px 1px 44px -2px black;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header #black-version:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 /** OVERLAY AGGIUNTO CON JS**/

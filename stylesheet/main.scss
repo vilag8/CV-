@@ -52,6 +52,13 @@ header{
             }
         }
     }
+    #black-version{
+        box-shadow: 0px 1px 44px -2px black;
+        transition: 1s;
+        &:hover{
+            transform: translateY(-6px)
+        }
+    }
 }
 
 /** OVERLAY AGGIUNTO CON JS**/
