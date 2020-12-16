@@ -32,10 +32,9 @@ $('#black-version').click(function (e) {
 });
 
 //QUANDO IL MOUSE ESCE DAL CONTAINER ATTIVA L'OVERLAY DEI CONTATTI
-//$('.container').mouseleave(function () { 
-//   $($overlay).fadeIn();
-//});
-
+$('.container').mouseleave(function () { 
+   $($overlay).fadeIn();
+});
 
 //MOUSE FORMA CIRCOLARE
 //NASCONDO LA FRECCIA STANDARD NEL FOGLIO CSS
@@ -52,11 +51,4 @@ $('a').mouseover(function () {
 //QUANDO IL MOUSE LASCIA I LINK TOGLI LA CLASSE IL CURSORE
 $('a').mouseleave(function () { 
     $('.cursor').removeClass('cursor_link');
-});
-
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-		//options here
-		autoScrolling:true,
-	});
 });

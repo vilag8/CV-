@@ -14,7 +14,8 @@
         display: grid;
         justify-content: left;
         .list{
-            margin: 0% 0% -10%
+            margin-bottom: -10%;
+            justify-content: end;
          }
     }
     .foto{

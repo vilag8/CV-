@@ -25,6 +25,7 @@ $colore: #007bff;
 /** NAVBAR **/
 header{
     @include display-flex(space-between);
+    align-items: center;
     p{
         opacity: unset;
     }
@@ -41,11 +42,9 @@ header{
     .text{
         margin-top: 11%;
     }
-    .list{
-        margin-left: -52%;
-    }
     ul {
         display: flex;
+        justify-content: flex-end;
         li{
         margin: 5%;
         &:hover{

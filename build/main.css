@@ -156,6 +156,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header p {
@@ -181,14 +184,13 @@ header .text {
   margin-top: 11%;
 }
 
-header .list {
-  margin-left: -52%;
-}
-
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 header ul li {
@@ -487,7 +489,10 @@ footer p {
             justify-content: left;
   }
   header .list {
-    margin: 0% 0% -10%;
+    margin-bottom: -10%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
   .foto {
     display: none;
